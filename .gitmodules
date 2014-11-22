@@ -1,0 +1,3 @@
+[submodule "_site"]
+	path = _site
+	url = rubicks.github.com:rubicks/rubicks.github.io.git
