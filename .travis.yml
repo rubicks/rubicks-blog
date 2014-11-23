@@ -3,3 +3,6 @@ ghc: 7.8
 script:
   - ghc --make site.hs
   - ./site build
+  - cd ./_site
+  - git commit -am "travis commit ${TRAVIS_COMMIT}"
+  - git push
