@@ -12,8 +12,7 @@ then
     git config --global user.email "travis@travis-ci.org"
     git config --global user.name "Travis CI"
 else
-    echo "GITHUB_TOKEN=git"
-    GITHUB_TOKEN="git"
+    GITHUB_TOKEN="3a1ee3d2ea5ce0c14873362d203b951e9e98806d"
 fi
 
 cd ${_here}
@@ -22,7 +21,7 @@ cd ${_here}
 _hash=$(git rev-parse HEAD)
 _mess=$(git log -1 --pretty=%B)
 
-_repo=${GITHUB_TOKEN}@github.com:rubicks/rubicks.github.io.git
+_repo=https://${GITHUB_TOKEN}@github.com:rubicks/rubicks.github.io.git
 _tdir=$(mktemp -d)
 
 echo "\${_repo} == \"${_repo}\""
