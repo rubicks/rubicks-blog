@@ -7,37 +7,32 @@ _here=$(dirname ${_this})
 echo "\${_this} == \"${_this}\""
 echo "\${_here} == \"${_here}\""
 
-
-BRANCH=master
-# PELICAN_OUTPUT_FOLDER=output
-# REMOTE_OUTPUT_FOLDER=remote-site
-
-if [ "$TRAVIS" == "true" ]; then
+if [[ "true" == "${TRAVIS}" ]]
+then
     git config --global user.email "travis@travis-ci.org"
     git config --global user.name "Travis CI"
 else
-    GITHUB_TOKEN="git" # set GH_TOKEN variable to "git" for correct GITHUB_REPO URL
+    echo "GITHUB_TOKEN=git"
+    GITHUB_TOKEN="git"
 fi
-
-# Pull hash and commit message of most recent commit
-commitHash=`git rev-parse HEAD`
-commitMessage=`git log -1 --pretty=%B`
-
-# Clone the GitHub Pages branch and rsync it with the newly generated files
-GITHUB_REPO=${GITHUB_TOKEN}@github.com:rubicks/rubicks.github.io.git
-
 
 cd ${_here}
 
-rm -vrf ${_here}/rubicks.github.io
+# Pull hash and commit message of most recent commit
+_hash=$(git rev-parse HEAD)
+_mess=$(git log -1 --pretty=%B)
 
-mkdir -vp ${_here}/rubicks.github.io
+_repo=${GITHUB_TOKEN}@github.com:rubicks/rubicks.github.io.git
+_tdir=$(mktemp -d)
 
-git clone ${GITHUB_REPO} ${_here}/rubicks.github.io
+echo "\${_repo} == \"${_repo}\""
+echo "\${_tdir} == \"${_tdir}\""
 
-cp -v -r -t ${_here}/rubicks.github.io ${_here}/_site/*
+git clone -- ${_repo} ${_tdir}
 
-cd ${_here}/rubicks.github.io
+cp -v -r -t ${_tdir} ${_here}/_site/*
+
+cd ${_tdir}
 
 git add --all
 

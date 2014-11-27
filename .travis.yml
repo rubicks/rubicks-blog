@@ -1,10 +1,8 @@
 ghc: 7.8
 script:
-- ghc --make site.hs
-- "./site build"
-- cd ./_site
-- git commit -am "travis commit ${TRAVIS_COMMIT}"
-- git push
+  - "./build.sh"
+after_success:
+  - "./deploy.sh"
 env:
   global:
-    secure: FOLjr4DDZa4PRhSwE5RmufOK6peR/+cluZhYqCNKnnmsUlQc1UPzTTqBpxoFlbsbd7IEw+RfA8dcAnqg+hm/c+0bMnfeWHnUCHJ8B+FZMW43PWrUVcu9TeRGiFQUIlGmwS/I2HqUONkngbke+l05TU7TGqbAyO59o6E9pB+zK4w=
+    secure: mCyaRB824+kSrlgUAKgwL/k5zhSwOIcNIahBFYok/+3iRZ7shYkhOwvv7zJi90ByVrXL252vH2jQWWZuUKTnK8tMOOHm1FRvPV8ad++zLt+KhpDRjjGYywypB4+YxUD/7LMCNeTdKXZVCdepFxe2sHD+uDNdY44YmliYtY+zAlo=
