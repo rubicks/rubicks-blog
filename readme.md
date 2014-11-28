@@ -27,8 +27,8 @@ automated deployment. If it's working properly, Travis will
 * push the commit
 
 If github-pages is working properly, it will serve the freshly pushed content on
-my github pages site. It may not be as simple as using [jekyll][jekyll], but,
-but that's the price I pay for preferring [haskell][haskell] to [ruby][ruby].
+my github pages site. It may not be as simple as using [jekyll][jekyll], but
+that's the price I pay for preferring [haskell][haskell] to [ruby][ruby].
 
 To see the gritty details, consult [```build.sh```][build-sh] and
 [```deploy.sh```][deploy-sh].
