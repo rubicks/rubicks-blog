@@ -5,4 +5,4 @@ after_success:
 - "./deploy.sh"
 env:
   global:
-  - secure: kVev4R3PKNLE+xpWSbk//793VJJ6KZSqbEbBdjOM/wDrjsYwuZ6YQiY49UL+Dx+DVrEhXmiOV8aIkSZRBNxBUmL0Li00jaYXGEaGS5cAsVorGeMozWRIBkaJuhlzHiY9PFJ1q3RfoyokslK/A4dVJD87yYPvNC8xAokxlnCoh+4=
+  - secure: WX6wN58lK6e+AT/f5zN9oArTGW9YY7soNk3rsVRTMLTNlzppj2Vb5W2+mVK9S8u3oRyOwNNCIptJCKQbpMnGX7kbL+PK/WDB2Bi6XlDVakZbAeucmyC42SXj+50MCl9TnbfAJyF41g7MzbYK/Z+oi5ZfAnxHvDOkIpXhYEdMBzY=
