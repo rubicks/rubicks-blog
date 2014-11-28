@@ -12,14 +12,14 @@ then
     git config --global user.email "travis@travis-ci.org"
     git config --global user.name "Travis CI"
 else
-    GITHUB_TOKEN="3a1ee3d2ea5ce0c14873362d203b951e9e98806d"
+    GITHUB_TOKEN="75ae90656c798fe990fb8a950323cc2a8a2e6a84"
 fi
 
 cd ${_here}
 
-# Pull hash and commit message of most recent commit
-_hash=$(git rev-parse HEAD)
+# Pull message and hash from most recent commit
 _mess=$(git log -1 --pretty=%B)
+_hash=$(git rev-parse HEAD)
 
 _repo=https://${GITHUB_TOKEN}@github.com:rubicks/rubicks.github.io.git
 _tdir=$(mktemp -d)
@@ -27,9 +27,16 @@ _tdir=$(mktemp -d)
 echo "\${_repo} == \"${_repo}\""
 echo "\${_tdir} == \"${_tdir}\""
 
-git clone -- ${_repo} ${_tdir}
+git clone    \
+    --quiet  \
+    --       \
+    ${_repo} \
+    ${_tdir}
 
-cp -v -r -t ${_tdir} ${_here}/_site/*
+cp --verbose                   \
+   --recursive                 \
+   --target-directory ${_tdir} \
+   ${_here}/_site/*
 
 cd ${_tdir}
 
