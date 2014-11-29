@@ -3,9 +3,18 @@ title: about
 ---
 I write software for fun and profit. But not at the same time. Yet.
 
+This is my blog. This is where I write prose about software.
 
-The content for this static site is hosted at
-<https://github.com/rubicks/rubicks.github.io>.
+It now occurs to me that I lead a very narrow existence.
 
-The hakyll source that generates this content is hosted at
-<https://github.com/rubicks/rubicks-blog>.
+---
+
+### show me the source
+
+It's a static site hosted here:
+
+* <https://github.com/rubicks/rubicks.github.io>
+
+The hakyll source that generates it is hosted here:
+
+* <https://github.com/rubicks/rubicks-blog>
