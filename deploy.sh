@@ -1,12 +1,17 @@
 #!/usr/bin/env bash
-# Derived from http://zonca.github.io/2013/09/automatically-build-pelican-and-publish-to-github-pages.html
+#
+# rubicks-blog/deploy.sh
+#
+# derived from:
+#
+# https://github.com/iKevinY/iKevinY.github.io/blob/src/deploy.sh
+#
+# http://zonca.github.io/2013/09/automatically-build-pelican-and-publish-to-github-pages.html
 
 
 # get some paths
 _this=$(readlink -f ${BASH_SOURCE})
 _here=$(dirname ${_this})
-# echo "\${_this} == \"${_this}\""
-# echo "\${_here} == \"${_here}\""
 
 cd ${_here}
 
@@ -14,8 +19,6 @@ cd ${_here}
 _mess=$(git rev-parse HEAD)
 _mess+="; "
 _mess+=$(git log -1 --pretty=%B)
-# _hash=$(git rev-parse HEAD)
-# echo "\${_hash} == \"${_hash}\""
 
 
 if [[ "true" == "${TRAVIS}" ]]
@@ -28,12 +31,7 @@ else
     _repo="git@github.com:rubicks/rubicks.github.io.git"
 fi
 
-# echo "\${_mess} == \"${_mess}\""
-
 _tdir=$(mktemp -d)
-
-# echo "\${_repo} == \"${_repo}\""
-# echo "\${_tdir} == \"${_tdir}\""
 
 git clone    \
     --quiet  \
