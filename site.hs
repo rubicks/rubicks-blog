@@ -59,6 +59,10 @@ main = hakyll $ do
 
     match "templates/*" $ compile templateCompiler
 
+    match "keybase.txt" $ do
+        route   idRoute
+        compile copyFileCompiler
+
 
 --------------------------------------------------------------------------------
 postCtx :: Context String
