@@ -59,9 +59,13 @@ main = hakyll $ do
 
     match "templates/*" $ compile templateCompiler
 
+    match "keybase.txt" $ do
+        route   idRoute
+        compile copyFileCompiler
+
 
 --------------------------------------------------------------------------------
 postCtx :: Context String
 postCtx =
-    dateField "date" "%B %e, %Y" `mappend`
+    dateField "date" "%Y %B %e" `mappend`
     defaultContext
