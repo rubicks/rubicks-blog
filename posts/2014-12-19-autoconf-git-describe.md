@@ -1,18 +1,18 @@
 ---
 layout: post
-title: ```autotools```, meet ```git describe```
+title: autoconf git describe
 category: posts
 ---
 
-You don't know me, [cpackham][cpackham], but I owe you a debt of gratitude. Let
-me explain...
+You don't know me, [Chris Packham][cpackham], but I owe you a debt of
+gratitude. Let me explain...
 
 I use autotools. The autotools are *The Means* by which one configures (and
 builds and distributes) software. Sure, they're weird, but they work.
 
-I also use git. Git is *The Means* by which one does version control (and
-branching and releases) on software. I don't have to apologize for anything with
-git---it's universally awesome and everything else sucks hard.
+I also use git. Git is *The Means* by which one versions (and branches and
+releases) software. I don't have to apologize for anything with git---it's
+universally awesome and everything else sucks hard.
 
 Git has the [```tag```][git-tag] and [```describe```][git-describe]
 sub-commands. Provided you have at least one tag on your repository, you can
@@ -48,9 +48,9 @@ describe``` only works as intended when the git repository is discoverable from
 the build directory; i.e, in-source builds and/or out-of-source builds when the
 git repo is the (eventual) parent.
 
-Many thanks to cpackham for showing this trick on the
+Many thanks to Packham for showing this trick on the
 [```configure.ac```][configure-ac] within the [```git-patch```][git-patch]
-project. There were [lots of others][search], but I found cpackham first.
+project. There were [lots of others][search], but I found Packham first.
 
 
 
