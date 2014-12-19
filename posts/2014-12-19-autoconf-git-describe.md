@@ -50,7 +50,7 @@ git repo is the (eventual) parent.
 
 Many thanks to cpackham for showing this trick on the
 [```configure.ac```][configure-ac] within the [```git-patch```][git-patch]
-project.
+project. There were [lots of others][search], but I found cpackham first.
 
 
 
@@ -60,3 +60,4 @@ project.
 [git-tag]: https://www.kernel.org/pub/software/scm/git/docs/git-tag.html
 [git-describe]: https://www.kernel.org/pub/software/scm/git/docs/git-describe.html
 [ac-init]: https://www.gnu.org/software/autoconf/manual/autoconf.html#Initializing-configure
+[search]: https://github.com/search?q=git+describe+extension%3Aac&type=Code
