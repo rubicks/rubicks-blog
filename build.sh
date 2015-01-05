@@ -9,4 +9,5 @@ cd ${_here}        || exit 1
 which ghc          || exit 1
 ghc --version      || exit 1
 ghc --make site.hs || exit 1
-./site build       || exit 1
+./site rebuild     || exit 1
+./site check       || exit 1
