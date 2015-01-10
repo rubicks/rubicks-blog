@@ -13,11 +13,9 @@ bash.
 I like emacs `M-x ediff` as much as the next code monkey, but sometimes you want
 a little tool for a little job.
 
-{% highlight bash %}
-$ sdiff -o outfile.txt file1.txt file2.txt
-# ... interactive merging session ...
-$ mail -s "merged stuff" boss@bigcorp.com < outfile.txt
-{% endhighlight %}
+    $ sdiff -o outfile.txt file1.txt file2.txt
+    # ... interactive merging session ...
+    $ mail -s "merged stuff" boss@bigcorp.com < outfile.txt
 
 I wish I had known about this utility earlier. Apparently, Linux Magazine had a
 nice [article][linux-mag-sdiff] about it a while ago. The gnu
