@@ -1,13 +1,19 @@
 language: haskell
+
 ghc: 7.8
+
 install:
-  - sudo apt-get -y install linkchecker
   - cabal update
+  - cabal install cabal-install
   - cabal install hakyll
+  - sudo apt-get -y install linkchecker
+
 script:
-- "./build.sh"
+  - ./build.sh
+
 after_success:
-- "./deploy.sh"
+  - ./deploy.sh
+
 env:
   global:
   - secure: WX6wN58lK6e+AT/f5zN9oArTGW9YY7soNk3rsVRTMLTNlzppj2Vb5W2+mVK9S8u3oRyOwNNCIptJCKQbpMnGX7kbL+PK/WDB2Bi6XlDVakZbAeucmyC42SXj+50MCl9TnbfAJyF41g7MzbYK/Z+oi5ZfAnxHvDOkIpXhYEdMBzY=
