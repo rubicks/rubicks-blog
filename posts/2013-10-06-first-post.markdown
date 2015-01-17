@@ -17,7 +17,9 @@ concept of a static site generator, but I do know [Holman][holman]'s
 [Left][left] made it dead simple to get this site up and running. I'll probably
 never be a jekyll maven, but this is good enough for now.
 
-[gp]: http://pages.github.com/
+Update: [I dropped Jekyll in favor of Hakyll](2014-11-22-hakyll.html).
+
+[gp]: https://pages.github.com/
 [holman]: http://zachholman.com/
 [jekyll]: https://github.com/mojombo/jekyll
 [left]: http://zachholman.com/posts/left
