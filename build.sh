@@ -5,9 +5,10 @@
 _this=$(readlink -f ${BASH_SOURCE})
 _here=$(dirname ${_this})
 
-cd ${_here}        || exit 1
-which ghc          || exit 1
-ghc --version      || exit 1
-ghc --make site.hs || exit 1
-./site rebuild     || exit 1
-./site check       || exit 1
+echo -n                   && \
+    cd ${_here}           && \
+    which ghc             && \
+    ghc --version         && \
+    ghc --make site.hs    && \
+    ${_here}/site rebuild && \
+    find ${_here}/_site -type f | xargs linkchecker
