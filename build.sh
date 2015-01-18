@@ -11,4 +11,4 @@ echo -n                   && \
     ghc --version         && \
     ghc --make site.hs    && \
     ${_here}/site rebuild && \
-    find ${_here}/_site -type f | xargs linkchecker
+    find ${_here}/_site -name "*.html" | xargs linkchecker --no-warnings
