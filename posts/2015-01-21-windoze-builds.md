@@ -24,8 +24,8 @@ nightmarish.
 
 In the free software world, the well-trodden path is to develop initially on
 Linux (almost always Ubuntu, these days) until the product stabilizes before
-trying to cross-compile with [mingw](mingw.org). If this is your first such
-foray into supporting multiple target platforms, then this is also your first
+trying to cross-compile with [mingw][mingw]. If this is your first such foray
+into supporting multiple target platforms, then this is also your first
 introduction to [The Matrix of Pain][matrix-of-pain].
 
 To enumerate your matrix of pain, find the Cartesian product of every set of all
@@ -44,6 +44,7 @@ That is, in short, what [Mortis69][Mortis69] and myself are attempting with
 don't have automated Windows builds yet.
 
 
+[mingw]: http://mingw.org/
 [Mortis69]: https://github.com/Mortis69
 [rendera]: https://github.com/Mortis69/rendera
 [matrix-of-pain]: https://en.wikipedia.org/wiki/Matrix_of_pain
