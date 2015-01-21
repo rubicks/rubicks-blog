@@ -28,10 +28,11 @@ trying to cross-compile with [mingw][mingw]. If this is your first such foray
 into supporting multiple target platforms, then this is also your first
 introduction to [The Matrix of Pain][matrix-of-pain].
 
-To enumerate your matrix of pain, find the Cartesian product of every set of all
-compilers (and variations of flags thereto) *for every platform*. For example,
-if I wish to support `gcc` and `clang` native compilations and `mingw` cross
-compilation, then my pain matrix is of size *three*. Not so bad, right?
+To enumerate your matrix of pain, find the
+[Cartesian product][cartesian-product] of every set of all compilers (and
+variations of flags thereto) *for every platform*. For example, if I wish to
+support `gcc` and `clang` native compilations and `mingw` cross compilation,
+then my pain matrix is of size *three*. Not so bad, right?
 
 It gets worse. If I want to support release and debug builds of each, that
 necessitates two sets of flags for each compilier, which doubles the size of the
@@ -45,6 +46,7 @@ don't have automated Windows builds yet.
 
 
 [mingw]: http://mingw.org/
+[cartesian-product]: https://en.wikipedia.org/wiki/Cartesian_product
 [Mortis69]: https://github.com/Mortis69
 [rendera]: https://github.com/Mortis69/rendera
 [matrix-of-pain]: https://en.wikipedia.org/wiki/Matrix_of_pain
