@@ -27,9 +27,7 @@ to do.
 I couldn't find a single example implementation---not *one*. After many
 faltering attempts, I discovered that such a thing it is actually
 possible. Unfortunately, for someone with my meager [m4][m4] skills, the effort
-required is completely unjustified. Moreover, the
-[resultant hackery][submod-barry] is probably fundamentally broken in ways I
-will never understand.
+required is completely unjustified.
 
 So, I did something else.
 
@@ -54,6 +52,9 @@ exactly? Why, in `configure.ac`, of course:
 I should probably change that relative path to its absolute equivalent, but, for
 the moment, it's working.
 
+Update: I deleted the __submod_barry__ branch on my rendera repo, but I did
+manage to get a [git submodule of FLTK][submod-fltk] working.
+
 
 [autoconf-manual]: https://www.gnu.org/software/autoconf/manual/autoconf.html
 [autoconf-manual-recurse]: https://www.gnu.org/software/autoconf/manual/autoconf.html#Subdirectories
@@ -64,4 +65,4 @@ the moment, it's working.
 [m4]: https://www.gnu.org/software/m4/
 [barry]: https://github.com/rubicks/barry
 [rendera]: https://github.com/Mortis69/rendera
-[submod-barry]: https://github.com/rubicks/rendera/tree/submod-barry
+[submod-fltk]: https://github.com/rubicks/rendera/tree/submod-fltk
