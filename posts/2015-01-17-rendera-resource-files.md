@@ -53,7 +53,10 @@ I should probably change that relative path to its absolute equivalent, but, for
 the moment, it's working.
 
 Update: I deleted the __submod_barry__ branch on my rendera repo, but I did
-manage to get a [git submodule of FLTK][submod-fltk] working.
+manage to get a __submod_fltk__ branch working.
+
+Update: I deleted the __submod_fltk__ branch on my rendera repo. The git
+submodule stuff was working. The cross compilation of FLTK was not.
 
 
 [autoconf-manual]: https://www.gnu.org/software/autoconf/manual/autoconf.html
@@ -65,4 +68,3 @@ manage to get a [git submodule of FLTK][submod-fltk] working.
 [m4]: https://www.gnu.org/software/m4/
 [barry]: https://github.com/rubicks/barry
 [rendera]: https://github.com/Mortis69/rendera
-[submod-fltk]: https://github.com/rubicks/rendera/tree/submod-fltk
