@@ -25,4 +25,4 @@ $ system-config-printer
 and step through the GUI. Someday, I'll figure out how to do it with nothing but
 bash and cups utilities.
 
-[man-lpstat]: http://www.cups.org/documentation.php/man-lpstat.html
+[man-lpstat]: http://linux.die.net/man/1/lpstat-cups
