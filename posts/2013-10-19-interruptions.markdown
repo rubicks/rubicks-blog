@@ -30,5 +30,5 @@ these conflicting strategies?
 [dhh]: http://david.heinemeierhansson.com/
 [feelthepain]: http://gettingreal.37signals.com/ch14_Feel_The_Pain.php
 [gettingreal]: http://gettingreal.37signals.com/toc.php
-[jf]: http://37signals.com/svn/writers/jf
-[ml]: http://37signals.com/svn/writers/mattlinderman
+[jf]: http://37signals.com/writers/jf
+[ml]: http://37signals.com/writers/mattlinderman
