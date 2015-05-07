@@ -19,7 +19,9 @@ This is what it *used to* look like (`/etc/resolv.conf.tmp`):
 
 Residential network troubleshooters will recognize that particular nameserver as
 the one running on the overworked little router sitting between you and your
-ISP. I don't 
+ISP. I don't know why (or how) [`NetworkManager`][arch-wiki-netman] did that to
+my `/etc/resolv.conf` but I *do* know that I didn't care to find out. My first
+priority was to restore DNS.
 
 Did you know google runs nameservers that just anyone use? I did. After I
 [read about it][arch-wiki-nm].
@@ -38,5 +40,6 @@ got me really excited about setting up my own `dnsmasq` local service. Then, I
 realized that I have more pressing things to do with my time---like writing
 about my little successes in my blog.
 
-[arch-wiki-nm]:https://wiki.archlinux.org/index.php/Network_configuration
+[arch-wiki-netconf]:https://wiki.archlinux.org/index.php/Network_configuration
 [arch-wiki-dnsmasq]:https://wiki.archlinux.org/index.php/Dnsmasq
+[arch-wiki-netman]:https://wiki.archlinux.org/index.php/NetworkManager
