@@ -24,7 +24,7 @@ my `/etc/resolv.conf` but I *do* know that I didn't care to find out. My first
 priority was to restore DNS.
 
 Did you know google runs nameservers that just anyone use? I did. After I
-[read about it][arch-wiki-nm].
+[read about it][arch-wiki-netconf].
 
 
 Then, I made my `/etc/resolv.conf` look like this:
