@@ -10,5 +10,7 @@ echo -n                   && \
     which ghc             && \
     ghc --version         && \
     ghc --make site.hs    && \
-    ${_here}/site rebuild && \
-    find ${_here}/_site -name "*.html" | xargs linkchecker --no-warnings
+    ${_here}/site rebuild
+
+# # maybe someday travis will update its linkchecker, this one throws too many errors
+# find ${_here}/_site -name "*.html" | xargs linkchecker --no-warnings
