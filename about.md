@@ -1,7 +1,7 @@
 ---
 title: about
 ---
-I write software for fun and profit. But not at the same time. Yet.
+I write software for fun and profit. Often, at the *same time*.
 
 This is my blog. This is where I write prose about software.
 
