@@ -1,17 +1,24 @@
 #!/usr/bin/env bash
-#
-# rubicks-blog/deploy.sh
-#
-# derived from:
-#
-# https://github.com/iKevinY/iKevinY.github.io/blob/src/deploy.sh
-#
-# http://zonca.github.io/2013/09/automatically-build-pelican-and-publish-to-github-pages.html
 
+# github.com/rubicks/rubicks-blog/deploy.sh
+#
+# references:
+#
+#   https://github.com/iKevinY/iKevinY.github.io/blob/src/deploy.sh
+#
+#   http://zonca.github.io/2013/09/automatically-build-pelican-and-publish-to-github-pages.html
 
-# get some paths
-_this=$(readlink -f ${BASH_SOURCE})
-_here=$(dirname ${_this})
+_pwd=$(pwd)
+_here=$(dirname $(readlink -f ${BASH_SOURCE}))
+
+function _return()
+{
+    cd ${_pwd}
+    exit $1
+}
+
+trap '_return 1' ERR
+set -e
 
 cd ${_here}
 
@@ -33,25 +40,16 @@ fi
 
 _tdir=$(mktemp -d)
 
-git clone    \
-    --quiet  \
-    --       \
-    ${_repo} \
-    ${_tdir} || exit 1
+git clone --quiet -- ${_repo} ${_tdir}
 
-cp --verbose                   \
-   --recursive                 \
-   --target-directory ${_tdir} \
-   ${_here}/_site/* || exit 1
+cp -v -r -t ${_tdir} ${_here}/_site/*
 
-cd ${_tdir} || exit 1
-
-git add --all || exit 1
+cd ${_tdir}
 
 git status --branch --short
 
-git commit -m "${_mess}" || exit 1
+git commit -am "${_mess}"
 
-git push --quiet --force origin master || exit 1
+git push --quiet --force origin master
 
-cd ${_here}
+_return 0
