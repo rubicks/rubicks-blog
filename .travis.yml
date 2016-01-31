@@ -3,7 +3,7 @@ language: go
 go: tip
 
 install:
-  - go get githu.com/spf13/hugo
+  - go get github.com/spf13/hugo
 
 script:
   - ./build.sh
