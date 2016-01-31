@@ -1,7 +1,9 @@
 ---
-layout: post
+categories:
+- posts
+date: 2014-04-09T00:00:00Z
 title: Merging with sdiff
-category: posts
+url: /2014/04/09/sdiff/
 ---
 
 It astounds me that I have been ignorant of [`sdiff`][man-sdiff] until

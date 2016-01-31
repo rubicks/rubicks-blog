@@ -1,0 +1,5 @@
+baseurl: http://rubicks.github.io/
+disablePathToLower: true
+languageCode: en-us
+title: words about code
+...

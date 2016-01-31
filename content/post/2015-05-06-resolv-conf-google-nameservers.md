@@ -1,7 +1,9 @@
 ---
-layout: post
+categories:
+- posts
+date: 2015-05-06T00:00:00Z
 title: resolv.conf and google nameservers
-category: posts
+url: /2015/05/06/resolv-conf-google-nameservers/
 ---
 
 Something broke my laptop's `NetworkManager`. At first I wasn't sure what was

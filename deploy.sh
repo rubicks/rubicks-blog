@@ -1,25 +1,10 @@
 #!/usr/bin/env bash
-
+#
 # github.com/rubicks/rubicks-blog/deploy.sh
-#
-# references:
-#
-#   https://github.com/iKevinY/iKevinY.github.io/blob/src/deploy.sh
-#
-#   http://zonca.github.io/2013/09/automatically-build-pelican-and-publish-to-github-pages.html
 
-_pwd=$(pwd)
+set -o pipefail
+set -euv
 _here=$(dirname $(readlink -f ${BASH_SOURCE}))
-
-function _return()
-{
-    cd ${_pwd}
-    exit $1
-}
-
-trap '_return 1' ERR
-set -e
-
 cd ${_here}
 
 # Pull message and hash from most recent commit
@@ -28,7 +13,7 @@ _mess+="; "
 _mess+=$(git log -1 --pretty=%B)
 
 
-if [[ "true" == "${TRAVIS}" ]]
+if [[ "true" == "${TRAVIS:-}" ]]
 then
     git config --global user.email "travis@travis-ci.org"
     git config --global user.name "Travis CI"
@@ -38,18 +23,21 @@ else
     _repo="git@github.com:rubicks/rubicks.github.io.git"
 fi
 
-_tdir=$(mktemp -d)
+cd $(mktemp -d)
+echo $PWD
 
-git clone --quiet -- ${_repo} ${_tdir}
+git clone --quiet -- ${_repo} ${PWD}
 
-cp -v -r -t ${_tdir} ${_here}/_site/*
+rm -vrf ${PWD}/*
 
-cd ${_tdir}
+cp -vrt ${PWD} ${_here}/public/*
+
+git add *
 
 git status --branch --short
 
 git commit -am "${_mess}"
 
+#git push --dry-run --verbose --force origin master
 git push --quiet --force origin master
 
-_return 0

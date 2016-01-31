@@ -1,7 +1,9 @@
 ---
-layout: post
+categories:
+- posts
+date: 2015-05-06T00:00:00Z
 title: sysadmin tricks
-category: posts
+url: /2015/05/06/sysadmin-tricks/
 ---
 
 ##### Find out which process is listening on some port

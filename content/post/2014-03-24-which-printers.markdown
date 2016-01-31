@@ -1,7 +1,9 @@
 ---
-layout: post
+categories:
+- posts
+date: 2014-03-24T00:00:00Z
 title: Which Printers?
-category: posts
+url: /2014/03/24/which-printers/
 ---
 
 Q\. Which printers does cups know about and what's their stati?

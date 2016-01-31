@@ -1,7 +1,9 @@
 ---
-layout: post
+categories:
+- posts
+date: 2015-05-24T00:00:00Z
 title: maven uberjar
-category: posts
+url: /2015/05/24/maven-uberjar/
 ---
 
 Maven. Uberjar. If those two words made you cringe just now, then you know my

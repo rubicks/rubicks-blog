@@ -1,7 +1,9 @@
 ---
-layout: post
+categories:
+- posts
+date: 2013-10-06T00:00:00Z
 title: First Post
-category: posts
+url: /2013/10/06/first-post/
 ---
 
 [GitHub Pages][gp] with [Jekyll][jekyll] seems like a pretty neat way to host a

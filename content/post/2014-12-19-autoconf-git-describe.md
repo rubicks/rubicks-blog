@@ -1,7 +1,9 @@
 ---
-layout: post
+categories:
+- posts
+date: 2014-12-19T00:00:00Z
 title: autoconf git describe
-category: posts
+url: /2014/12/19/autoconf-git-describe/
 ---
 
 You don't know me, [Chris Packham][cpackham], but I owe you a debt of

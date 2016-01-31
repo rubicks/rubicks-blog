@@ -1,7 +1,9 @@
 ---
-layout: post
+categories:
+- posts
+date: 2014-11-30T00:00:00Z
 title: flash sound
-category: posts
+url: /2014/11/30/flash-sound/
 ---
 
 I had a problem with the sound coming from the flash browser plugin: it

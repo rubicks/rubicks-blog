@@ -1,7 +1,9 @@
 ---
-layout: post
+categories:
+- posts
+date: 2015-01-17T00:00:00Z
 title: rendera resource files
-category: posts
+url: /2015/01/17/rendera-resource-files/
 ---
 
 Remember when I was [all excited](2014-12-14-barry.html) about [`barry`][barry]?

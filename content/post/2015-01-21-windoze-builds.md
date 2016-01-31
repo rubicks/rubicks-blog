@@ -1,7 +1,9 @@
 ---
-layout: post
+categories:
+- posts
+date: 2015-01-21T00:00:00Z
 title: windoze builds
-category: posts
+url: /2015/01/21/windoze-builds/
 ---
 
 Let's get one thing out of the way right now:

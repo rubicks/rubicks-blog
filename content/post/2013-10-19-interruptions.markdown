@@ -1,7 +1,9 @@
 ---
-layout: post
+categories:
+- posts
+date: 2013-10-19T00:00:00Z
 title: Interruptions
-category: posts
+url: /2013/10/19/interruptions/
 ---
 
 The [37 Signals][37signals]-affiliated authors of
