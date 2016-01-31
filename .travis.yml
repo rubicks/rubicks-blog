@@ -1,12 +1,9 @@
-language: haskell
+language: go
 
-ghc: 7.8
+go: tip
 
 install:
-  - cabal update
-  - cabal install cabal-install
-  - cabal install hakyll
-  - sudo apt-get -y install linkchecker
+  - go get githu.com/spf13/hugo
 
 script:
   - ./build.sh
