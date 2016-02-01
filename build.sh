@@ -7,4 +7,4 @@ _here=$(dirname $(readlink -f ${BASH_SOURCE}))
 cd ${_here}
 command -v hugo
 hugo version
-hugo --theme=heather-hugo
+hugo
