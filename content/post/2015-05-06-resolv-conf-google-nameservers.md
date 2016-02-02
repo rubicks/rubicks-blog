@@ -25,7 +25,7 @@ ISP. I don't know why (or how) [`NetworkManager`][arch-wiki-netman] did that to
 my `/etc/resolv.conf` but I *do* know that I didn't care to find out. My first
 priority was to restore DNS.
 
-Did you know google runs nameservers that just anyone use? I did. After I
+Did you know google runs nameservers that just *anyone* can use? I did. After I
 [read about it][arch-wiki-netconf].
 
 
